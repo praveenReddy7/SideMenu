@@ -19,8 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = SWRevealViewController(rearViewController: MenuController(), frontViewController: UINavigationController(rootViewController: HomeController()))
+//        let menuCtl = MenuController()
+//        let homeCtl = HomeController()
+//        menuCtl.homeViewController = homeCtl
+//        window?.rootViewController = SWRevealViewController(rearViewController: menuCtl, frontViewController: UINavigationController(rootViewController: homeCtl))
        
+        window?.rootViewController = ContainerController()
 
 
         return true

@@ -15,9 +15,8 @@ class ContainerController: SWRevealViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        self.rearViewController = MenuController()
-        self.frontViewController = UINavigationController.init(rootViewController: HomeController()) 
+        self.rearViewController = MenuController(container: self)
+        self.frontViewController = UINavigationController.init(rootViewController: HomeController(data: "Home"))
         
     }
     

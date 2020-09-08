@@ -10,28 +10,45 @@ import UIKit
 
 
 class HomeController: UIViewController {
+    
+    let data: String
+    
+    init(data: String) {
+        self.data = data
+        super.init(nibName: nil, bundle: nil)
+    }
 
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.yellow
-        title = "Home"
+        view.backgroundColor = UIColor.white
+        title = self.data
         self.revealViewController()?.rearViewRevealWidth = 60
         self.revealViewController()?.revealToggle(self)
         
-//        let barBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self.revealViewController(), action: #selector(self.revealViewController().revealToggle(_:)))
         let barBtn = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(tapped))
         self.navigationItem.leftBarButtonItem = barBtn
         
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle(self.data, for: .normal)
+        btn.backgroundColor = .systemBlue
+        btn.addTarget(self, action: #selector(btnTapped(_:)), for: .touchUpInside)
+        view.addSubview(btn)
         
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .red
-        view.addSubview(label)
-        
-        label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -4).isActive = true
-        label.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        label.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 200).isActive = true
+        btn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        btn.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        btn.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        btn.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+    
+    @objc func btnTapped(_ sender: UIButton) {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .white
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func tapped() {
@@ -43,10 +60,5 @@ class HomeController: UIViewController {
             self.revealViewController()?.rearViewRevealWidth = 60
             self.revealViewController()?.revealToggle(animated: true)
         }
-        self.revealViewController()?.frontViewController
     }
-    
-
-    
-
 }
