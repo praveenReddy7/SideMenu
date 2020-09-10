@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+let minMenuWidth: CGFloat = 60.0
+let maxMenuWidth: CGFloat = 280.0
 
 class HomeController: UIViewController {
     
@@ -26,7 +27,8 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         title = self.data
-        self.revealViewController()?.rearViewRevealWidth = 60
+        
+        self.revealViewController()?.rearViewRevealWidth = maxMenuWidth
         self.revealViewController()?.revealToggle(self)
         
         let barBtn = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(tapped))
@@ -53,11 +55,11 @@ class HomeController: UIViewController {
     
     @objc func tapped() {
         let menu = self.revealViewController()?.rearViewRevealWidth ?? 0
-        if menu == 60 {
-            self.revealViewController()?.rearViewRevealWidth = 300
+        if menu == minMenuWidth {
+            self.revealViewController()?.rearViewRevealWidth = maxMenuWidth
             self.revealViewController()?.revealToggle(animated: true)
         } else {
-            self.revealViewController()?.rearViewRevealWidth = 60
+            self.revealViewController()?.rearViewRevealWidth = minMenuWidth
             self.revealViewController()?.revealToggle(animated: true)
         }
     }

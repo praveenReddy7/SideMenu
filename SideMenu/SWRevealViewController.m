@@ -851,6 +851,7 @@ const int FrontViewPositionNone = 0xff;
     if (_frontViewPosition <= FrontViewPositionLeft)
         toggledFrontViewPosition = FrontViewPositionRight;
     
+    // toggledFrontViewPosition replaced with FrontViewPositionRight
     [self setFrontViewPosition:FrontViewPositionRight animated:animated];
       
 }
