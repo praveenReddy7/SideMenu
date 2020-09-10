@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        menuCtl.homeViewController = homeCtl
 //        window?.rootViewController = SWRevealViewController(rearViewController: menuCtl, frontViewController: UINavigationController(rootViewController: homeCtl))
        
-        window?.rootViewController = ContainerController()
+        window?.rootViewController = LoginVC()
 
 
         return true

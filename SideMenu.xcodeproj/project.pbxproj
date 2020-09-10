@@ -15,6 +15,8 @@
 		4087489F21FC48C800F55176 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087489E21FC48C800F55176 /* HomeController.swift */; };
 		408748A121FC48D600F55176 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408748A021FC48D600F55176 /* MenuController.swift */; };
 		408748A521FC544200F55176 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408748A421FC544200F55176 /* SWRevealViewController.m */; };
+		AC5FD76F250A4CC700BB0BD5 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FD76E250A4CC700BB0BD5 /* SettingVC.swift */; };
+		AC5FD771250A4D9E00BB0BD5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FD770250A4D9E00BB0BD5 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		408748A221FC544100F55176 /* SideMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SideMenu-Bridging-Header.h"; sourceTree = "<group>"; };
 		408748A321FC544200F55176 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		408748A421FC544200F55176 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		AC5FD76E250A4CC700BB0BD5 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		AC5FD770250A4D9E00BB0BD5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				408748A421FC544200F55176 /* SWRevealViewController.m */,
 				4087489921FC481100F55176 /* Controller */,
 				4087486721FC2FB600F55176 /* AppDelegate.swift */,
+				AC5FD770250A4D9E00BB0BD5 /* LoginVC.swift */,
+				AC5FD76E250A4CC700BB0BD5 /* SettingVC.swift */,
 				4087486B21FC2FB600F55176 /* Main.storyboard */,
 				4087486E21FC2FB700F55176 /* Assets.xcassets */,
 				4087487021FC2FB700F55176 /* LaunchScreen.storyboard */,
@@ -168,6 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				408748A121FC48D600F55176 /* MenuController.swift in Sources */,
+				AC5FD76F250A4CC700BB0BD5 /* SettingVC.swift in Sources */,
+				AC5FD771250A4D9E00BB0BD5 /* LoginVC.swift in Sources */,
 				4087489F21FC48C800F55176 /* HomeController.swift in Sources */,
 				408748A521FC544200F55176 /* SWRevealViewController.m in Sources */,
 				4087486821FC2FB600F55176 /* AppDelegate.swift in Sources */,

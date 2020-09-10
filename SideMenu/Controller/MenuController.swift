@@ -34,14 +34,49 @@ class MenuController: UIViewController {
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "menuCell")
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .darkGray
         view.addSubview(tableView)
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60).isActive = true
+        
+        let settings = UIButton()
+        settings.translatesAutoresizingMaskIntoConstraints = false
+        settings.setTitle("settings", for: .normal)
+        settings.addTarget(self, action: #selector(settingTapped), for: .touchUpInside)
+        settings.setTitleColor(.systemBlue, for: .normal)
+        view.addSubview(settings)
+        
+        settings.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        settings.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        settings.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        settings.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        let logout = UIButton()
+        logout.translatesAutoresizingMaskIntoConstraints = false
+        logout.setTitle("logout", for: .normal)
+        logout.addTarget(self, action: #selector(logoutTapped), for: .touchUpInside)
+        logout.setTitleColor(.systemBlue, for: .normal)
+        view.addSubview(logout)
+        
+        logout.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
+        logout.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        logout.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        logout.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+    
+    @objc func settingTapped() {
+        let nav = UINavigationController(rootViewController: SettingVC())
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true, completion: nil)
+    }
+    
+    @objc func logoutTapped() {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            appDelegate.window?.rootViewController = LoginVC()
+        }
     }
     
     override func viewDidLayoutSubviews() {
