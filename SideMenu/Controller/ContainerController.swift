@@ -16,7 +16,7 @@ class ContainerController: SWRevealViewController {
         super.viewDidLoad()
 
         self.rearViewController = MenuController(container: self)
-        self.frontViewController = UINavigationController.init(rootViewController: HomeController(data: "Home"))
+        self.frontViewController = UINavigationController.init(rootViewController: HomeController(data: "Home", menuWidth: maxMenuWidth))
         
     }
     

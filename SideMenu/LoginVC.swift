@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Login", for: .normal)
-        btn.backgroundColor = .systemBlue
+        btn.backgroundColor = .blue
         btn.addTarget(self, action: #selector(btnTapped(_:)), for: .touchUpInside)
         view.addSubview(btn)
         

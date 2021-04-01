@@ -46,10 +46,11 @@ class MenuController: UIViewController {
         settings.translatesAutoresizingMaskIntoConstraints = false
         settings.setTitle("settings", for: .normal)
         settings.addTarget(self, action: #selector(settingTapped), for: .touchUpInside)
-        settings.setTitleColor(.systemBlue, for: .normal)
+        settings.setTitleColor(.blue, for: .normal)
+        settings.tag = 10
         view.addSubview(settings)
         
-        settings.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        settings.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         settings.widthAnchor.constraint(equalToConstant: 70).isActive = true
         settings.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         settings.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -58,10 +59,11 @@ class MenuController: UIViewController {
         logout.translatesAutoresizingMaskIntoConstraints = false
         logout.setTitle("logout", for: .normal)
         logout.addTarget(self, action: #selector(logoutTapped), for: .touchUpInside)
-        logout.setTitleColor(.systemBlue, for: .normal)
+        logout.setTitleColor(.blue, for: .normal)
+        logout.tag = 11
         view.addSubview(logout)
         
-        logout.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
+        logout.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         logout.widthAnchor.constraint(equalToConstant: 70).isActive = true
         logout.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         logout.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -83,14 +85,23 @@ class MenuController: UIViewController {
         super.viewDidLayoutSubviews()
         tableView.reloadData()
         print(view.frame.width)
-        print("viewdidload")
+        
+        let settingsBtn = view.viewWithTag(10) as? UIButton
+        let logotBtn = view.viewWithTag(11) as? UIButton
+        if view.frame.width == minMenuWidth { // 120
+            settingsBtn?.isHidden = true
+            logotBtn?.isHidden = true
+        } else {
+            settingsBtn?.isHidden = false
+            logotBtn?.isHidden = false
+        }
     }
 }
 
 
 extension MenuController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if view.frame.width == 120 {
+        if view.frame.width == minMenuWidth { //120
             return miniMenu.count
         }
         return menu.count
@@ -98,7 +109,7 @@ extension MenuController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
-        if view.frame.width == 120 {
+        if view.frame.width == minMenuWidth { // 120
             cell.textLabel?.text = miniMenu[indexPath.row]
         } else {
             cell.textLabel?.text = menu[indexPath.row]
@@ -107,7 +118,7 @@ extension MenuController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = HomeController(data: menu[indexPath.row])
+        let vc = HomeController(data: menu[indexPath.row], menuWidth: view.frame.width)
         self.container.setFront(UINavigationController(rootViewController: vc), animated: true)
     }
 }
