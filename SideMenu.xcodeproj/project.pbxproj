@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402B38132A42C27E00C94CF9 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402B38122A42C27E00C94CF9 /* SettingVC.swift */; };
 		4087486821FC2FB600F55176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087486721FC2FB600F55176 /* AppDelegate.swift */; };
 		4087486D21FC2FB600F55176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4087486B21FC2FB600F55176 /* Main.storyboard */; };
 		4087486F21FC2FB700F55176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4087486E21FC2FB700F55176 /* Assets.xcassets */; };
@@ -15,11 +16,11 @@
 		4087489F21FC48C800F55176 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087489E21FC48C800F55176 /* HomeController.swift */; };
 		408748A121FC48D600F55176 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408748A021FC48D600F55176 /* MenuController.swift */; };
 		408748A521FC544200F55176 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408748A421FC544200F55176 /* SWRevealViewController.m */; };
-		AC5FD76F250A4CC700BB0BD5 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FD76E250A4CC700BB0BD5 /* SettingVC.swift */; };
 		AC5FD771250A4D9E00BB0BD5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FD770250A4D9E00BB0BD5 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		402B38122A42C27E00C94CF9 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		403380DC25064578006B9A7E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4087486421FC2FB600F55176 /* SideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4087486721FC2FB600F55176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		408748A221FC544100F55176 /* SideMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SideMenu-Bridging-Header.h"; sourceTree = "<group>"; };
 		408748A321FC544200F55176 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		408748A421FC544200F55176 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		AC5FD76E250A4CC700BB0BD5 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		AC5FD770250A4D9E00BB0BD5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,8 +80,8 @@
 				408748A421FC544200F55176 /* SWRevealViewController.m */,
 				4087489921FC481100F55176 /* Controller */,
 				4087486721FC2FB600F55176 /* AppDelegate.swift */,
+				402B38122A42C27E00C94CF9 /* SettingVC.swift */,
 				AC5FD770250A4D9E00BB0BD5 /* LoginVC.swift */,
-				AC5FD76E250A4CC700BB0BD5 /* SettingVC.swift */,
 				4087486B21FC2FB600F55176 /* Main.storyboard */,
 				4087486E21FC2FB700F55176 /* Assets.xcassets */,
 				4087487021FC2FB700F55176 /* LaunchScreen.storyboard */,
@@ -174,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				408748A121FC48D600F55176 /* MenuController.swift in Sources */,
-				AC5FD76F250A4CC700BB0BD5 /* SettingVC.swift in Sources */,
+				402B38132A42C27E00C94CF9 /* SettingVC.swift in Sources */,
 				AC5FD771250A4D9E00BB0BD5 /* LoginVC.swift in Sources */,
 				4087489F21FC48C800F55176 /* HomeController.swift in Sources */,
 				408748A521FC544200F55176 /* SWRevealViewController.m in Sources */,
