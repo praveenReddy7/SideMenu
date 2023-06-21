@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let homeCtl = HomeController()
 //        menuCtl.homeViewController = homeCtl
 //        window?.rootViewController = SWRevealViewController(rearViewController: menuCtl, frontViewController: UINavigationController(rootViewController: homeCtl))
+        
+        
+        // test change 1
        
         window?.rootViewController = LoginVC()
 
