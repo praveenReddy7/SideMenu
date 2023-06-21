@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = SWRevealViewController(rearViewController: menuCtl, frontViewController: UINavigationController(rootViewController: homeCtl))
         
         
-        // test change 1
+        // test change 1 new change
        
         window?.rootViewController = LoginVC()
 

@@ -14,7 +14,7 @@ class SettingVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        // test change 3 should delete before merge
+        // test change 3 should delete before merge new change
         
         let cancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelTapped))
         self.navigationItem.rightBarButtonItem = cancel
